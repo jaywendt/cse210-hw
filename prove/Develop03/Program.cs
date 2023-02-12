@@ -37,11 +37,15 @@ class Program
         scrip1.post();
         
         Console.WriteLine("Press Enter to continue or type 'quit' to finish");
-        Console.ReadLine();
+        string answer = Console.ReadLine();
 
-        Console.Clear();
-
-        Console.WriteLine();
-
+        if (answer == "quit") 
+        {
+            Console.Clear();
+        }
+        else 
+        {
+            
+        }
     }
 }
