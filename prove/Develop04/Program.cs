@@ -15,6 +15,11 @@ class Base
 
         Thread.Sleep(5000);
     }
+
+    public void finish()
+    {
+        Console.WriteLine("Well done!  You've successfully finished this exercise.");
+    }
 }
 
 class Breathing : Base
@@ -118,7 +123,13 @@ class Program
 
             reflec1.randomQuestion();
 
-            
+            Thread.Sleep(refTimer);
+
+            Console.WriteLine("Time's up!");
+
+            Thread.Sleep(4000);
+
+            act2.finish();
 
         }
         else if (choice == 3){
