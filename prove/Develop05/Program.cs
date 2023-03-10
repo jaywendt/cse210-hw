@@ -9,9 +9,42 @@ public class OverGoal
         string add = Console.ReadLine();
 
         if (add == "1"){
-            Console.WriteLine("Please enter your new goal here: ");
+            Console.WriteLine("Please enter your new Simple Goal here: ");
             string newGoal1 = Console.ReadLine();
+            Console.WriteLine("What is the name of your new goal? ");
+            string newGoal1Name = Console.ReadLine();
+            Console.WriteLine("Please enter a short description of your new goal: ");
+            string newGoal1Desc = Console.ReadLine();
+            Console.WriteLine("How many points do you want associated with this goal?");
+            string newGoal1Points = Console.ReadLine();
         }
+
+        else if (add == "2"){
+            Console.WriteLine("Please enter your new Eternal Goal here: ");
+            string newgoal2 = Console.ReadLine();
+            Console.WriteLine("What is the name of your new goal? ");
+            string newGoal2Name = Console.ReadLine();
+            Console.WriteLine("Please enter a short description of your new goal: ");
+            string newGoal2Desc = Console.ReadLine();
+            Console.WriteLine("How many points do you want associated with this goal?");
+            string newGoal2Points = Console.ReadLine();
+        }
+
+        else if (add == "3"){
+            Console.WriteLine("Please enter your new Checklist Goal here: ");
+            string newgoal3 = Console.ReadLine();
+            Console.WriteLine("What is the name of your new goal? ");
+            string newGoal3Name = Console.ReadLine();
+            Console.WriteLine("Please enter a short description of your new goal: ");
+            string newGoal3Desc = Console.ReadLine();
+            Console.WriteLine("How many points do you want associated with this goal?");
+            string newGoal3Points = Console.ReadLine();
+        }
+
+        else {
+            Console.WriteLine("That response does not work.  Please enter 1, 2, or 3.");
+        }
+
     }
     
     public void RecordEvent()
@@ -40,7 +73,7 @@ public class EternalGoal : OverGoal
 
 }
 
-public class user
+public class User
 {
     public string username;
 
@@ -55,6 +88,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("");
         Console.WriteLine("Welcome to your goal game!");
         Console.WriteLine("");
         Console.WriteLine("Your current score is: {score}");
@@ -77,6 +111,39 @@ class Program
             Console.WriteLine("2. Eternal Goals");
             Thread.Sleep(1000);
             Console.WriteLine("3. Checklist Goals");
+            Thread.Sleep(2000);
+
+            OverGoal act1 = new OverGoal();
+
+            act1.addGoal();
+        }
+
+        else if (menuChoice == 2){
+
+        }
+        
+        else if (menuChoice == 3){
+
+        }
+
+        else if (menuChoice == 4){
+
+        }
+
+        else if (menuChoice == 5){
+
+        }
+
+        else if (menuChoice == 6){
+            Console.WriteLine("Thank you!");
+            Thread.Sleep(3000);
+            Console.WriteLine("Goodbye!");
+            Console.Clear();
+        }
+
+        else {
+            Console.WriteLine("That response doesn't work.  Please select again from the menu.");
+            Console.Clear();
         }
     }
 }
