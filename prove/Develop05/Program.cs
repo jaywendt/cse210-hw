@@ -39,6 +39,10 @@ public class OverGoal
             string newGoal3Desc = Console.ReadLine();
             Console.WriteLine("How many points do you want associated with this goal?");
             string newGoal3Points = Console.ReadLine();
+            Console.WriteLine("How many times does this goal need to be accomplished for a bonus point score?");
+            string newGoal3Times =  Console.ReadLine();
+            Console.WriteLine("How many bonus points do you get for accomplishing it that many times?");
+            string newGoal3Bonus = Console.ReadLine();
         }
 
         else {
@@ -47,10 +51,6 @@ public class OverGoal
 
     }
     
-    public void RecordEvent()
-    {
-
-    }
 
     public void IsComplete()
     {
@@ -58,40 +58,41 @@ public class OverGoal
     }
 }
 
-public class SimpleGoal : OverGoal
+public class List : OverGoal
 {
 
 }
 
-public class CheckGoal : OverGoal
+public class SaveGoal : OverGoal
 {
 
 }
 
-public class EternalGoal : OverGoal
+public class LoadGoal : OverGoal
 {
 
 }
 
-public class User
+public class RecordEvent : OverGoal
 {
-    public string username;
 
-    public void score()
-    {
+}
 
-    }
-
+public class Score
+{
+    public int score;
 }
 
 class Program
 {
     static void Main(string[] args)
     {
+        Score userScore = new Score();
+        
         Console.WriteLine("");
         Console.WriteLine("Welcome to your goal game!");
         Console.WriteLine("");
-        Console.WriteLine("Your current score is: {score}");
+        Console.WriteLine("Your current score is:" + userScore);
         Console.WriteLine("");
         Console.WriteLine("Menu:");
         Console.WriteLine("1. Create New Goal");
