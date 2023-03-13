@@ -51,6 +51,10 @@ public class OverGoal
 
     }
     
+    public void RecordEvent()
+    {
+
+    }
 
     public void IsComplete()
     {
@@ -73,14 +77,14 @@ public class LoadGoal : OverGoal
 
 }
 
-public class RecordEvent : OverGoal
-{
-
-}
-
 public class Score
 {
     public int score;
+
+    public void totalScore()
+    {
+        Console.WriteLine("Your total score is:" + );
+    }
 }
 
 class Program
@@ -88,11 +92,12 @@ class Program
     static void Main(string[] args)
     {
         Score userScore = new Score();
+        userScore.totalScore();
         
         Console.WriteLine("");
         Console.WriteLine("Welcome to your goal game!");
         Console.WriteLine("");
-        Console.WriteLine("Your current score is:" + userScore);
+        userScore.totalScore();
         Console.WriteLine("");
         Console.WriteLine("Menu:");
         Console.WriteLine("1. Create New Goal");
