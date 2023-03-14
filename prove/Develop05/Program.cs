@@ -10,39 +10,45 @@ public class OverGoal
 
         if (add == "1"){
             Console.WriteLine("Please enter your new Simple Goal here: ");
-            string newGoal1 = Console.ReadLine();
+            string newGoal = Console.ReadLine();
             Console.WriteLine("What is the name of your new goal? ");
-            string newGoal1Name = Console.ReadLine();
+            string newGoalName = Console.ReadLine();
             Console.WriteLine("Please enter a short description of your new goal: ");
-            string newGoal1Desc = Console.ReadLine();
+            string newGoalDesc = Console.ReadLine();
             Console.WriteLine("How many points do you want associated with this goal?");
-            string newGoal1Points = Console.ReadLine();
+            string newGoalPoints = Console.ReadLine();
+
+            string newOverGoal = newGoalName + ":" + newGoalDesc + ".  Worth: (" + newGoalPoints + ")";
         }
 
         else if (add == "2"){
             Console.WriteLine("Please enter your new Eternal Goal here: ");
-            string newgoal2 = Console.ReadLine();
+            string newGoal = Console.ReadLine();
             Console.WriteLine("What is the name of your new goal? ");
-            string newGoal2Name = Console.ReadLine();
+            string newGoalName = Console.ReadLine();
             Console.WriteLine("Please enter a short description of your new goal: ");
-            string newGoal2Desc = Console.ReadLine();
+            string newGoalDesc = Console.ReadLine();
             Console.WriteLine("How many points do you want associated with this goal?");
-            string newGoal2Points = Console.ReadLine();
+            string newGoalPoints = Console.ReadLine();
+
+            string newOverGoal = newGoalName + ":" + newGoalDesc + ".  Worth: (" + newGoalPoints + ")"; 
         }
 
         else if (add == "3"){
             Console.WriteLine("Please enter your new Checklist Goal here: ");
-            string newgoal3 = Console.ReadLine();
+            string newGoal = Console.ReadLine();
             Console.WriteLine("What is the name of your new goal? ");
-            string newGoal3Name = Console.ReadLine();
+            string newGoalName = Console.ReadLine();
             Console.WriteLine("Please enter a short description of your new goal: ");
-            string newGoal3Desc = Console.ReadLine();
+            string newGoalDesc = Console.ReadLine();
             Console.WriteLine("How many points do you want associated with this goal?");
-            string newGoal3Points = Console.ReadLine();
+            string newGoalPoints = Console.ReadLine();
             Console.WriteLine("How many times does this goal need to be accomplished for a bonus point score?");
-            string newGoal3Times =  Console.ReadLine();
+            string newGoalTimes =  Console.ReadLine();
             Console.WriteLine("How many bonus points do you get for accomplishing it that many times?");
-            string newGoal3Bonus = Console.ReadLine();
+            string newGoalBonus = Console.ReadLine();
+
+            string newOverGoal = newGoalName + ":" + newGoalDesc + "Worth: " + newGoalPoints + ".  For every " + newGoalTimes + " completed: " + newGoalBonus;
         }
 
         else {
@@ -64,7 +70,7 @@ public class OverGoal
 
 public class List : OverGoal
 {
-
+    
 }
 
 public class SaveGoal : OverGoal
@@ -83,7 +89,7 @@ public class Score
 
     public void totalScore()
     {
-        Console.WriteLine("Your total score is:" + );
+        Console.WriteLine("Your total score is:" + score);
     }
 }
 
@@ -91,6 +97,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        List<OverGoal> goals = new List<OverGoal>();
+
         Score userScore = new Score();
         userScore.totalScore();
         
